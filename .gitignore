@@ -2,3 +2,6 @@ env
 *.pyc
 cover
 .coverage
+.DS_Store
+data-dev.sqlite
+data-test.sqlite
