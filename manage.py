@@ -19,7 +19,7 @@ def test():
     Runs unit test
     '''
     from subprocess import call
-    call(['nostests','-v',
+    call(['nosetests','-v',
          '--with-coverage', '--cover-package=app', '--cover-branches',
          '--cover-erase', '--cover-html', '--cover-html-dir=cover'])
 
