@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+Training app
+{% endblock %}
+
+{% block page_content %}
+{{ wtf.quick_form(form)  }}
+
+{% for book in matches %}
+<div class="thunbnail">
+  {{ book }}
+</div>
+{% endfor %}
+{% endblock %}
