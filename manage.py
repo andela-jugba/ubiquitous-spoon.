@@ -6,7 +6,7 @@ import os
 
 app = create_app(os.getenv('CONFIG', 'default'))
 manager = Manager(app)
-migrate = Migrate(app)
+migrate = Migrate(app, db)
 
 def make_shell_context():
     return dict(app=app, db=db, Book=Book, Category=Category)

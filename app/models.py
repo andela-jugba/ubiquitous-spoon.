@@ -5,6 +5,7 @@ class Book(db.Model):
     id = db.Column(db.Integer, unique=True, primary_key=True)
     isbn = db.Column(db.Integer, unique=True, index=True)
     name = db.Column(db.String(120), index=True)
+    year = db.Column(db.DateTime)
     category_id = db.Column('category_id', db.Integer, db.ForeignKey('categories.id'))
     
     @staticmethod
