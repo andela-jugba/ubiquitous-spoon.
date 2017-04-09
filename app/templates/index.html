@@ -8,9 +8,11 @@ Training app
 {% block page_content %}
 {{ wtf.quick_form(form)  }}
 
-{% for book in matches %}
-<div class="thunbnail">
-  {{ book }}
-</div>
-{% endfor %}
+{% if matches %}
+  {% for book in matches %}
+    <div class="thunbnail">
+      {{ book }}
+    </div>
+  {% endfor %}
+{% endif %}
 {% endblock %}

@@ -24,7 +24,7 @@ class TestingConfig(Config):
                             'sqlite:///' + os.path.join(basedir, 'data-test.sqlite')
 
 class ProductionConfig(Config):
- SQLALCHEMY_DATABASE_URI = os.environ.get('PRODUCTION_DATABASE_URL') or \
+ SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
                             'sqlite:///' + os.path.join(basedir, 'data-production.sqlite')
 
 class HerokuConfig(ProductionConfig):

@@ -24,5 +24,12 @@ def test():
          '--with-coverage', '--cover-package=app', '--cover-branches',
          '--cover-erase', '--cover-html', '--cover-html-dir=cover'])
 
+@manager.command
+def deploy():
+    from flask_migrate import upgrade
+    
+    upgrade()
+    
+    
 if __name__ == '__main__':
     manager.run()
