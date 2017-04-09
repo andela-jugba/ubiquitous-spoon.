@@ -5,3 +5,4 @@ cover
 .DS_Store
 data-dev.sqlite
 data-test.sqlite
+.idea
